@@ -1,0 +1,3 @@
+[submodule "module/light_pulse"]
+	path = module/light_pulse
+	url = git@github.com:lightsource-nz/light_pulse.git

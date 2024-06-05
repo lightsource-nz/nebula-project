@@ -1,0 +1,10 @@
+{
+    "cmake.configureSettings": {
+        //"PICO_BOARD": "waveshare_rp2040_zero",
+        "PICO_BOARD": "pico",
+        "PICO_SDK_PATH": "../../../tools/pico-sdk/pico-sdk",
+        "LIGHT_PATH": "../light_framework_mk2"
+    },
+    "C_Cpp.autoAddFileAssociations": false,
+    "C_Cpp.loggingLevel": "Information"
+}

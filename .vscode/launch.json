@@ -1,0 +1,41 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "rp2040-openocd",
+            "type": "cortex-debug",
+            "servertype": "openocd",
+            "cwd": "${workspaceRoot}/build",
+            "configFiles": ["${workspaceRoot}/openocd.cfg"],
+            "svdFile": "${workspaceRoot}../../../tools/pico-sdk/pico-sdk/src/rp2040/hardware_regs/rp2040.svd",
+            "request": "launch",
+            "executable": "${command:cmake.launchTargetPath}",
+            "windows": {
+                "armToolchainPath": "${workspaceRoot}/../../tools/pico-sdk/gcc-arm-none-eabi/bin",
+                "serverpath": "${workspaceRoot}/../../tools/pico-sdk/openocd/openocd.exe"
+            },
+            "linux": {
+                "armToolchainPath": "/usr/local/bin",
+                "gdbPath": "arm-none-eabi-gdb"
+            }
+        },
+        {
+            "name": "host-mode",
+            "type": "cppdbg",
+            "request": "launch",
+            "cwd": "${workspaceRoot}/build",
+            "program": "${command:cmake.launchTargetPath}"
+        },
+        {
+            "name": "native-win64-gcc-12.1.0",
+            "type": "cppdbg",
+            "request": "launch",
+            "cwd": "${workspaceRoot}/build",
+            "miDebuggerPath": "C:/msys64/mingw64/bin/gdb.exe",
+            "program": "${command:cmake.launchTargetPath}"
+        }
+    ]
+}

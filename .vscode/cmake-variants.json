@@ -1,0 +1,80 @@
+{
+    "buildType": {
+        "default": "debug-host",
+        "choices": {
+            "debug-host": {
+                "short": "Debug - Host",
+                "long": "Include debug information",
+                "buildType": "Debug",
+                "settings": {
+                    "LIGHT_RUN_MODE": "DEBUG",
+                    "LIGHT_SYSTEM": "HOST_OS",
+                    "LIGHT_PLATFORM": "HOST"
+                }
+            },
+            "debug-pico": {
+                "short": "Debug - Pico SDK (RP2040)",
+                "long": "Include debug information",
+                "buildType": "Debug",
+                "settings": {
+                    "LIGHT_RUN_MODE": "DEBUG",
+                    "LIGHT_SYSTEM": "PICO_SDK",
+                    "LIGHT_PLATFORM": "TARGET",
+                    "LIGHT_BOARD": "pico"
+                }
+            },
+            "debug-pico-host": {
+                "short": "Debug - Pico SDK (Host)",
+                "long": "Include debug information",
+                "buildType": "Debug",
+                "settings": {
+                    "LIGHT_RUN_MODE": "DEBUG",
+                    "LIGHT_SYSTEM": "PICO_SDK",
+                    "LIGHT_PLATFORM": "HOST"
+                }
+            },
+            "trace-pico-host": {
+                "short": "Trace - Pico SDK (Host)",
+                "long": "Trace logging messages enabled",
+                "buildType": "Debug",
+                "settings": {
+                    "LIGHT_RUN_MODE": "TRACE",
+                    "LIGHT_SYSTEM": "PICO_SDK",
+                    "LIGHT_PLATFORM": "HOST",
+                    "REND_DEBUG_API_TRACE": "1"
+                }
+            },
+            "pixel-trace-pico-host": {
+                "short": "Pixel Trace - Pico SDK (Host)",
+                "long": "Rend pixel tracing enabled",
+                "buildType": "Debug",
+                "settings": {
+                    "LIGHT_RUN_MODE": "TRACE",
+                    "LIGHT_SYSTEM": "PICO_SDK",
+                    "LIGHT_PLATFORM": "HOST",
+                    "REND_DEBUG_API_TRACE": "1",
+                    "REND_DEBUG_PIXEL_TRACE": "1"
+                }
+            },
+            "release-host": {
+                "short": "Release - Host",
+                "long": "Optimize for speed- exclude debug information",
+                "buildType": "Release",
+                "settings": {
+                    "LIGHT_PLATFORM": "HOST",
+                    "LIGHT_RUN_MODE": "PRODUCTION"
+                }
+            },
+            "release-pico": {
+                "short": "Release - Pico SDK (RP2040)",
+                "long": "Optimize for speed- exclude debug information",
+                "buildType": "Release",
+                "settings": {
+                    "LIGHT_RUN_MODE": "PRODUCTION",
+                    "LIGHT_SYSTEM": "PICO_SDK",
+                    "LIGHT_PLATFORM": "TARGET"
+                }
+            }
+        }
+    }
+}
